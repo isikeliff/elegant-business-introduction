@@ -23,10 +23,10 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <>
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden min-h-screen flex items-center">
         <img src={hero} alt="Surbey kurumsal ofis binası" width={1600} height={912} className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-hero-overlay" />
-        <div className="relative mx-auto max-w-6xl px-6 py-32 text-primary-foreground md:py-44">
+        <div className="relative mx-auto max-w-6xl px-6 py-32 text-primary-foreground md:py-44 w-full">
           <p className="eyebrow">Adana · 2020'den bu yana</p>
           <h1 className="mt-5 max-w-3xl text-5xl font-medium leading-[1.05] md:text-7xl">
             Güvenle kurulan, <em className="text-gold-soft">özenle</em> sürdürülen ticaret.
@@ -89,8 +89,11 @@ function Index() {
                 <span className="font-serif text-xl text-primary">{title}</span>
               </div>
             ))}
-            <Link to="/faaliyet-alanlari" className="flex items-center bg-primary p-6 text-sm uppercase tracking-[0.2em] text-primary-foreground hover:bg-navy-deep">
-              Tümünü incele →
+            <Link
+              to="/faaliyet-alanlari"
+              className="flex items-center gap-2 bg-card p-6 text-sm uppercase tracking-[0.2em] text-gold border-t border-gold hover:bg-gold/5 transition-colors"
+            >
+              Tümünü incele <span className="text-gold">→</span>
             </Link>
           </div>
         </div>
