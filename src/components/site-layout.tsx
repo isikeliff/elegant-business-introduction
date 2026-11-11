@@ -105,7 +105,7 @@ export function PageHero({
         />
       )}
       <div className="absolute inset-0 bg-hero-overlay" />
-      <div className="relative mx-auto max-w-6xl px-6 py-32 md:py-44 w-full">
+      <div className="relative mx-auto max-w-6xl px-6 py-24 w-full">
         <p className="eyebrow">{eyebrow}</p>
         <h1 className="mt-5 max-w-3xl text-5xl font-medium leading-[1.05] md:text-6xl lg:text-7xl">
           {title}

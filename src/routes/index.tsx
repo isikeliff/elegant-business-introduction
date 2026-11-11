@@ -26,7 +26,7 @@ function Index() {
       <section className="relative overflow-hidden min-h-screen flex items-center">
         <img src={hero} alt="Surbey kurumsal ofis binası" width={1600} height={912} className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-hero-overlay" />
-        <div className="relative mx-auto max-w-6xl px-6 py-32 text-primary-foreground md:py-44 w-full">
+        <div className="relative mx-auto max-w-6xl px-6 py-24 text-primary-foreground w-full">
           <p className="eyebrow">Adana · 2020'den bu yana</p>
           <h1 className="mt-5 max-w-3xl text-5xl font-medium leading-[1.05] md:text-7xl">
             Güvenle kurulan, <em className="text-gold-soft">özenle</em> sürdürülen ticaret.
