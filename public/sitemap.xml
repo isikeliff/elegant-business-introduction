@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://surbeylimited.com/</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://surbeylimited.com/"/>
+  </url>
+
+  <url>
+    <loc>https://surbeylimited.com/hakkimizda</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://surbeylimited.com/hakkimizda"/>
+  </url>
+
+  <url>
+    <loc>https://surbeylimited.com/faaliyet-alanlari</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://surbeylimited.com/faaliyet-alanlari"/>
+  </url>
+
+  <url>
+    <loc>https://surbeylimited.com/iletisim</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://surbeylimited.com/iletisim"/>
+  </url>
+
+</urlset>

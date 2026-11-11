@@ -2,14 +2,19 @@ import { createFileRoute } from "@tanstack/react-router";
 import { MapPin, Building, Clock } from "lucide-react";
 import { PageHero } from "@/components/site-layout";
 import { company } from "@/lib/company";
+import contactHero from "@/assets/contact-hero.jpg";
 
 export const Route = createFileRoute("/iletisim")({
   head: () => ({
     meta: [
-      { title: "İletişim — Surbey Ltd. Şti." },
-      { name: "description", content: "Surbey ofis adresi: Çınarlı Mah., Sapmaz İş Merkezi, Seyhan / Adana." },
-      { property: "og:title", content: "İletişim — Surbey Ltd. Şti." },
+      { title: "İletişim — Surbey Sanayi ve Ticaret" },
+      { name: "description", content: "Surbey ofis adresi: Çınarlı Mah., Sapmaz İş Merkezi, Seyhan / Adana. Telefon ve e-posta ile ulaşın." },
+      { property: "og:title", content: "İletişim — Surbey Sanayi ve Ticaret" },
+      { property: "og:url", content: "https://surbeylimited.com/iletisim" },
       { property: "og:description", content: "Surbey ile iletişime geçin; Seyhan / Adana ofisimizde sizi bekliyoruz." },
+    ],
+    links: [
+      { rel: "canonical", href: "https://surbeylimited.com/iletisim" },
     ],
   }),
   component: Contact,
@@ -19,12 +24,14 @@ function Contact() {
   const q = encodeURIComponent("Sapmaz İş Merkezi, Çınarlı, Seyhan, Adana");
   return (
     <>
-      <PageHero eyebrow="İletişim" title="Sizi ofisimizde ağırlamaktan memnuniyet duyarız" />
+      <PageHero image={contactHero} eyebrow="İletişim" title="Sizi ofisimizde ağırlamaktan memnuniyet duyarız">
+        Projeleriniz, iş birliği teklifleriniz ve kurumsal talepleriniz için Seyhan / Adana merkez ofisimizde sizleri bekliyoruz.
+      </PageHero>
       <section className="mx-auto grid max-w-6xl gap-12 px-6 py-24 md:grid-cols-5">
         <div className="space-y-8 md:col-span-2">
           {[
             { icon: MapPin, t: "Adres", d: company.address },
-            { icon: Building, t: "Unvan", d: "Surbey Ltd. Şti. — MERSİS " + company.mersis },
+            { icon: Building, t: "Merkez Ofis", d: "Surbey Sanayi ve Ticaret" },
             { icon: Clock, t: "Çalışma Saatleri", d: "Pazartesi – Cumartesi, 09:00 – 18:00" },
           ].map(({ icon: I, t, d }) => (
             <div key={t} className="flex gap-4 border-l-2 border-gold pl-5">

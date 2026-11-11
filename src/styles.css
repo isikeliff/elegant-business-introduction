@@ -136,6 +136,7 @@
 
 @utility bg-hero-overlay { background-image: var(--gradient-hero); }
 @utility shadow-elegant { box-shadow: var(--shadow-elegant); }
+@utility font-times { font-family: "Times New Roman", Times, serif; }
 @utility eyebrow {
   font-family: var(--font-sans);
   font-size: 0.75rem;

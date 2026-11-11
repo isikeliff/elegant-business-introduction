@@ -1,14 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site-layout";
 import { company } from "@/lib/company";
+import aboutHero from "@/assets/about-hero.jpg";
 
 export const Route = createFileRoute("/hakkimizda")({
   head: () => ({
     meta: [
-      { title: "Biz Kimiz — Surbey Ltd. Şti." },
-      { name: "description", content: "Surbey'in hikâyesi, değerleri ve resmî kurumsal bilgileri." },
-      { property: "og:title", content: "Biz Kimiz — Surbey Ltd. Şti." },
+      { title: "Biz Kimiz — Surbey Sanayi ve Ticaret" },
+      { name: "description", content: "Surbey'in hikâyesi, değerleri ve kurumsal ilkeleri. 2020'de Adana'da kurulan, 11 sektörde faaliyet gösteren şeffaf ticaret şirketi." },
+      { property: "og:title", content: "Biz Kimiz — Surbey Sanayi ve Ticaret" },
+      { property: "og:url", content: "https://surbeylimited.com/hakkimizda" },
       { property: "og:description", content: "2020'de Adana'da kurulan Surbey'i yakından tanıyın." },
+    ],
+    links: [
+      { rel: "canonical", href: "https://surbeylimited.com/hakkimizda" },
     ],
   }),
   component: About,
@@ -16,18 +21,18 @@ export const Route = createFileRoute("/hakkimizda")({
 
 function About() {
   const rows = [
-    ["Ticaret Unvanı", company.legalName],
-    ["Şirket Türü", company.type],
-    ["MERSİS Numarası", company.mersis],
-    ["Ticaret Sicil No", `${company.sicilNo} — ${company.registry}`],
-    ["İlk Tescil Tarihi", company.founded],
-    ["Sermaye", company.capital],
-    ["Durum", "Aktif"],
-    ["Müdür", company.manager],
+    ["Faaliyet Kapsamı", "11 Farklı Ticari Sektör"],
+    ["Hizmet Modeli", "Entegre Tedarik ve Uygulama"],
+    ["Çalışma Prensibi", "Şeffaflık, Güvenilirlik ve Süreklilik"],
+    ["Hizmet Ağı", "Bölgesel ve Ulusal Çözüm Ortaklığı"],
+    ["Müşteri İlişkileri", "Uzun Vadeli ve Güvenilir İş Birliği"],
+    ["Kalite Standartları", "Yüksek Nitelikli Hizmet ve Malzeme"],
+    ["Merkez", "Seyhan / Adana"],
+    ["İş Yaklaşımı", "Zamanında ve Kusursuz Teslimat"],
   ];
   return (
     <>
-      <PageHero eyebrow="Biz Kimiz" title="Güvene dayalı bir iş anlayışı">
+      <PageHero image={aboutHero} eyebrow="Biz Kimiz" title="Güvene dayalı bir iş anlayışı">
         2020 yılında Adana'da kurulan Surbey, farklı sektörlerdeki deneyimini tek çatı altında buluşturan bir ticaret şirketidir.
       </PageHero>
       <section className="mx-auto grid max-w-6xl gap-16 px-6 py-24 md:grid-cols-2">
@@ -38,7 +43,7 @@ function About() {
           <p className="font-serif text-2xl italic text-primary">“Dürüstlük, şeffaflık, süreklilik.”</p>
         </div>
         <div className="border border-border bg-card p-8 shadow-elegant">
-          <p className="eyebrow">Resmî Kayıt Bilgileri</p>
+          <p className="eyebrow">Kurumsal Prensiplerimiz</p>
           <dl className="mt-6 divide-y divide-border">
             {rows.map(([k, v]) => (
               <div key={k} className="grid grid-cols-3 gap-4 py-3 text-sm">
@@ -47,7 +52,7 @@ function About() {
               </div>
             ))}
           </dl>
-          <p className="mt-6 text-xs text-muted-foreground">Bilgiler T.C. Adana Ticaret Sicili Müdürlüğü tasdiknamesine dayanmaktadır.</p>
+          <p className="mt-6 text-xs text-muted-foreground">Surbey, tüm faaliyet alanlarında dürüst ve ilkeli ticaret anlayışını temsil eder.</p>
         </div>
       </section>
     </>
